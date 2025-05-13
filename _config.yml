@@ -107,7 +107,7 @@ navbar:
   - title   : Articles # Label
     url     : /blog/ # url	
   - title   : Executive Board
-    url     : /cheatsheets 
+    url     : /eboard/ 
   - title   : About
     url     : /about
   # - title   : Extras
