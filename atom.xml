@@ -3,7 +3,7 @@
 	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
 	<link href="https://bu-sports-analytics.github.io/atom.xml" rel="self" type="application/atom+xml" />
 	<link href="https://bu-sports-analytics.github.io/" rel="alternate" type="text/html" />
-	<updated>2025-05-13T14:36:15-04:00</updated>
+	<updated>2025-05-13T14:40:25-04:00</updated>
 	<id>https://bu-sports-analytics.github.io/atom.xml</id>
 	<title>BU Sports Analytics group | Boston University Sports Analytics Group</title>
 	<subtitle>Boston University Sports Analytics Group</subtitle>
@@ -147,11 +147,11 @@
             &lt;/button&gt;
             &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarToggler&quot;&gt;
               &lt;ul class=&quot;navbar-nav ml-auto&quot;&gt;&lt;li class=&quot;nav-item&quot;&gt;
-                  &lt;a class=&quot;nav-link &quot; href=&quot;https://bu-sports-analytics.github.io/blog/&quot;&gt;Blog&lt;/a&gt;
+                  &lt;a class=&quot;nav-link &quot; href=&quot;https://bu-sports-analytics.github.io/blog/&quot;&gt;Articles&lt;/a&gt;
                 &lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;
-                  &lt;a class=&quot;nav-link &quot; href=&quot;https://bu-sports-analytics.github.io/cheatsheets&quot;&gt;Cheatsheets&lt;/a&gt;
-                &lt;/li&gt;&lt;li class=&quot;nav-item dropdown&quot;&gt;&lt;a class=&quot;nav-link dropdown-toggle &quot; href=&quot;#&quot; id=&quot;Extras&quot; role=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Extras&lt;/a&gt;
-                  &lt;div class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;Extras&quot;&gt;&lt;a class=&quot;dropdown-item &quot; href=&quot;https://bu-sports-analytics.github.io/tags&quot;&gt;Tags&lt;/a&gt;&lt;a class=&quot;dropdown-item &quot; href=&quot;https://bu-sports-analytics.github.io/categories&quot;&gt;Categories&lt;/a&gt;&lt;a class=&quot;dropdown-item &quot; href=&quot;https://bu-sports-analytics.github.io/archive&quot;&gt;Archive&lt;/a&gt;&lt;a class=&quot;dropdown-item &quot; href=&quot;https://bu-sports-analytics.github.io/current-skin&quot;&gt;Current skin&lt;/a&gt;&lt;/div&gt;
+                  &lt;a class=&quot;nav-link &quot; href=&quot;https://bu-sports-analytics.github.io/cheatsheets&quot;&gt;Executive Board&lt;/a&gt;
+                &lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;
+                  &lt;a class=&quot;nav-link &quot; href=&quot;https://bu-sports-analytics.github.io/about&quot;&gt;About&lt;/a&gt;
                 &lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;
                   &lt;a class=&quot;nav-link &quot; href=&quot;https://bu-sports-analytics.github.io/search&quot;&gt;
                     &lt;span class=&quot;d-md-none p-0 pr-1&quot;&gt;Search&lt;/span&gt;
