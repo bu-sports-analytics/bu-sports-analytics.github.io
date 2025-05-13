@@ -1,7 +1,7 @@
 ---
 layout: landingpage
 title: BU Sports Analytics Group
-header_type: hero
+header_type: splash
 subtitle: Welcome!
 ---
 
