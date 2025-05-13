@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://bu-sports-analytics.github.io/cheatsheets/01-markdown-cheat-sheet</loc>
-<lastmod>2025-05-13T14:40:25-04:00</lastmod>
+<lastmod>2025-05-13T14:49:32-04:00</lastmod>
 </url>
 <url>
 <loc>https://bu-sports-analytics.github.io/cheatsheets/02-kramdown-cheat-sheet</loc>
-<lastmod>2025-05-13T14:40:25-04:00</lastmod>
+<lastmod>2025-05-13T14:49:32-04:00</lastmod>
 </url>
 <url>
 <loc>https://bu-sports-analytics.github.io/20150104_first-post/</loc>
@@ -68,6 +68,9 @@
 <url>
 <loc>https://bu-sports-analytics.github.io/current-skin</loc>
 <lastmod>2018-02-07T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://bu-sports-analytics.github.io/eboard/</loc>
 </url>
 <url>
 <loc>https://bu-sports-analytics.github.io/blog/</loc>
