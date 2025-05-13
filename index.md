@@ -2,6 +2,7 @@
 layout: landingpage
 title: BU Sports Analytics Group
 header_type: splash
+header_img: "https://www.bu.edu/files/2025/04/frozen-four-feat.jpg"
 subtitle: Welcome!
 ---
 
