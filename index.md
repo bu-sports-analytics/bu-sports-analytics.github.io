@@ -3,10 +3,10 @@ layout: landingpage
 title: BU Sports Analytics Group
 header_type: splash
 header_img: "https://www.bu.edu/files/2025/04/frozen-four-feat.jpg"
-subtitle: Welcome!
+subtitle: Est. 2024
 ---
 
-Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
+<!-- Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
 
 Contains basic configuration to get you a site with:
 
@@ -23,4 +23,4 @@ Contains basic configuration to get you a site with:
 
 On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitemap.xml), and Chulapa generates an Atom feed on [./atom.xml](./atom.xml) and a RSS 2.0 feed on [./rss.xml](./rss.xml).
 
-[Configure as necessary](https://dieghernan.github.io/chulapa/docs/02-config) and replace sample content with your own.
+[Configure as necessary](https://dieghernan.github.io/chulapa/docs/02-config) and replace sample content with your own. -->

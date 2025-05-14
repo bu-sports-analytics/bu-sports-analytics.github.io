@@ -25,7 +25,7 @@ og_image                :     #default[author.avatar (see below)] or [github-ava
 twitter_site            :     #Avoid @
 author:
   name                  :  BU Sports Analytics Group   # Name Surname Company
-  avatar                :     # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
+  avatar                :  "assets/sag_logo_square.png"    # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
   location              : "Boston, Massachusetts" 
 #  links:                
 #    - url:  #A link or email: https://twitter.com/jack, mail@example.com
@@ -101,8 +101,8 @@ navbar:
   expand    :  # At which device size expand the navbar menu. default[md] https://getbootstrap.com/docs/4.5/layout/overview/
   brand:
     title   :  Home # Title in navbar
-    url     :  # default["url/baseurl"]
-    img     :  # An small image, try 30x30px
+    url     :  / # default["url/baseurl"]
+    img     : "assets/sag_logo_square_tiny.png" # An small image, try 30x30px
   nav:
   - title   : Articles # Label
     url     : /blog/ # url	
@@ -132,7 +132,10 @@ footer:
   links:
     - label : Repo on Github # Label
       icon  : fab fa-github # Fontawesome 5 icon
-      url   : https://github.com/dieghernan/chulapa-101 # A link or email: https://twitter.com/jack, mail@example.com
+      url   : https://github.com/bu-sports-analytics # A link or email: https://twitter.com/jack, mail@example.com
+    - label : Linkedin # Label
+      icon  : fab fa-linkedin # Fontawesome 5 icon
+      url   : https://www.linkedin.com/company/busportsanalytics/
     - label: "RSS"
       icon: "fa fa-rss"
       url:  "./atom.xml"
