@@ -1,6 +1,6 @@
 ---
 layout: landingpage
-title: BU Sports Analytics Group
+title: Sports Analytics Group @ BU
 header_type: splash
 header_img: "https://www.bu.edu/files/2025/04/frozen-four-feat.jpg"
 subtitle: Est. 2024
