@@ -54,6 +54,16 @@ var store = [{
         "url": "https://bu-sports-analytics.github.io/20250318_newsletter4/",
         "img": null
       },{
+        "title": "Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!",
+        "subtitle": "",
+        "excerpt": "<p>You can see the winning presentation attached below</p>",
+        "content": "",
+        "categories": [],
+        "date": "2025-04-02",
+        "tags": [],
+        "url": "https://bu-sports-analytics.github.io/20250402_osu/",
+        "img": null
+      },{
         "title": "BUSAG Newsletter Vol 4",
         "subtitle": "",
         "excerpt": "<p>Updates for the Coming Weeks</p>",
@@ -69,7 +79,7 @@ var store = [{
         "excerpt": "<p>A demo page checking Markdown</p>",
         "content": "What’s Markdown? Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one...",
         "categories": ["tutorial"],
-        "date": "2025-08-17",
+        "date": "2025-08-18",
         "tags": ["starter","syntax","markdown"],
         "url": "https://bu-sports-analytics.github.io/cheatsheets/01-markdown-cheat-sheet",
         "img": null
@@ -79,7 +89,7 @@ var store = [{
         "excerpt": "<p>kramdown supercharges Markdown with some interesting features.</p>",
         "content": "What’s kramdown? kramdown supercharges Markdown with some interesting features. kramdown is the default Jekyll Markdown processor. When creating your site with Jekyll, you can use the standard Markdown syntax plus...",
         "categories": ["tutorial"],
-        "date": "2025-08-17",
+        "date": "2025-08-18",
         "tags": ["starter","syntax","kramdown"],
         "url": "https://bu-sports-analytics.github.io/cheatsheets/02-kramdown-cheat-sheet",
         "img": null

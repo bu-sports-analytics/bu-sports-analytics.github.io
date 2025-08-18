@@ -7,8 +7,8 @@
 		<description>Official website of Boston University Sports Analytics Group, an undergraduate club for students who love sports analytics</description>
 		<language>en-US</language>
 		<copyright>(c) 2025, BU Sports Analytics Group</copyright>	
-		<pubDate>Sun, 17 Aug 2025 13:10:17 -0400</pubDate>
-		<lastBuildDate>Sun, 17 Aug 2025 13:10:17 -0400</lastBuildDate>
+		<pubDate>Mon, 18 Aug 2025 00:13:24 -0400</pubDate>
+		<lastBuildDate>Mon, 18 Aug 2025 00:13:24 -0400</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://bu-sports-analytics.github.io/rss.xml" rel="self" type="application/rss+xml" />
@@ -40,6 +40,20 @@
 			<category>posts</category>
 		    <guid isPermaLink="true">https://bu-sports-analytics.github.io/20250403_newsletter5/</guid>
       <pubDate>Thu, 03 Apr 2025 00:00:00 -0400</pubDate>
+		</item><item>
+			<title>Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!</title>
+			<description>
+				<![CDATA[	
+ 				
+    		<p>1 min.</p>
+				<div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7315404888111296512?collapsed=1" height="567" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+</div>
+				]]>
+			</description>
+			<link>https://bu-sports-analytics.github.io/20250402_osu/</link>
+			<category>posts</category>
+		    <guid isPermaLink="true">https://bu-sports-analytics.github.io/20250402_osu/</guid>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 -0400</pubDate>
 		</item><item>
 			<title>Submit Your March Madness Bracket Challenge Now🏀</title>
 			<description>

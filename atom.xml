@@ -3,7 +3,7 @@
 	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
 	<link href="https://bu-sports-analytics.github.io/atom.xml" rel="self" type="application/atom+xml" />
 	<link href="https://bu-sports-analytics.github.io/" rel="alternate" type="text/html" />
-	<updated>2025-08-17T13:10:17-04:00</updated>
+	<updated>2025-08-18T00:13:24-04:00</updated>
 	<id>https://bu-sports-analytics.github.io/atom.xml</id>
 	<title>BU Sports Analytics group | Boston University Sports Analytics Group</title>
 	<subtitle>Boston University Sports Analytics Group</subtitle>
@@ -39,6 +39,25 @@
 		<author>
 			<name>BU Sports Analytics Group</name></author>
 		<summary type="html">Updates for the Coming Weeks</summary>
+		<category term="posts"/>
+		
+	</entry><entry>
+		<title type="html">Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!</title>
+		<link href="https://bu-sports-analytics.github.io/20250402_osu/" rel="alternate" type="text/html" title="Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!"/>
+		<published>2025-04-02T00:00:00-04:00</published>
+		<updated>2025-04-02T00:00:00-04:00</updated>
+		<id>https://bu-sports-analytics.github.io/20250402_osu/</id>
+		<content type="html" xml:base="https://bu-sports-analytics.github.io/20250402_osu/">
+		
+  		
+	&lt;p&gt;1 min.&lt;/p&gt;
+			&lt;iframe src=&quot;https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7315404888111296512?collapsed=1&quot; height=&quot;567&quot; width=&quot;504&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; title=&quot;Embedded post&quot;&gt;&lt;/iframe&gt;
+
+		</content>
+		
+		<author>
+			<name>BU Sports Analytics Group</name></author>
+		<summary type="html"> You can see the winning presentation attached below</summary>
 		<category term="posts"/>
 		
 	</entry><entry>
