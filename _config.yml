@@ -143,7 +143,7 @@ footer:
       url:  "./atom.xml"
     - label : Email # Label for the mail icon
       icon  : fa fa-envelope # Font Awesome icon for email
-      url   : mailto:busportsanalytics@gmail.com 
+      url   : busportsanalytics@gmail.com 
   copyright: © 2025 Boston University Sports Analytics Group # default is © <year> <name> 
   
 # C. Theme Settings
