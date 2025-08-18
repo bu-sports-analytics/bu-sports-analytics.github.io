@@ -19,7 +19,7 @@ baseurl                 :     #On Github Pages you may leave it blank. Have a lo
 repository              :     bu-sports-analytics/bu-sports-analytics.github.io # Needs to be set (e.g. dieghernan/chulapa)
 words_per_minute        :     #default[200]
 timezone                : US/Eastern     #"Europe/Madrid ,see https://jekyllrb.com/docs/configuration/options/ and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+date_format             : "%m-%d-%y" 
 # SEO
 og_image                :     #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
@@ -141,6 +141,9 @@ footer:
     - label: "RSS"
       icon: "fa fa-rss"
       url:  "./atom.xml"
+    - label : Email # Label for the mail icon
+      icon  : fa fa-envelope # Font Awesome icon for email
+      url   : mailto:busportsanalytics@gmail.com 
   copyright: © 2025 Boston University Sports Analytics Group # default is © <year> <name> 
   
 # C. Theme Settings
