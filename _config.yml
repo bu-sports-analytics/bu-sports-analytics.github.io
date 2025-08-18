@@ -110,6 +110,8 @@ navbar:
     url     : /eboard/ 
   - title   : About
     url     : /about
+  - title   : Events
+    url     : /events
   # - title   : Extras
   #   child   :
   #     - title : Tags
