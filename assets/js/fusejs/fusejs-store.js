@@ -44,6 +44,16 @@ var store = [{
         "url": "https://bu-sports-analytics.github.io/20250228_newsletter3/",
         "img": null
       },{
+        "title": "BUSAG Newsletter Vol 4",
+        "subtitle": "",
+        "excerpt": "<p>Updates for the Coming Weeks</p>",
+        "content": "&lt;center&gt; Updates for the Coming Weeks Hello everyone! As we begin to wrap up the semester, we wanted to share the dates for our final few meetings/events of the year:...",
+        "categories": [],
+        "date": "2025-03-04",
+        "tags": [],
+        "url": "https://bu-sports-analytics.github.io/20250304_newsletter5/",
+        "img": null
+      },{
         "title": "Submit Your March Madness Bracket Challenge Now🏀",
         "subtitle": "",
         "excerpt": "<p>March Madness Brackets!</p>",
@@ -56,22 +66,22 @@ var store = [{
       },{
         "title": "Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!",
         "subtitle": "",
-        "excerpt": "<p>You can see the winning presentation attached below</p>",
+        "excerpt": "<p>See the winning presentation attached</p>",
         "content": "",
         "categories": [],
-        "date": "2025-04-02",
+        "date": "2025-04-04",
         "tags": [],
-        "url": "https://bu-sports-analytics.github.io/20250402_osu/",
+        "url": "https://bu-sports-analytics.github.io/20250404_osu/",
         "img": null
       },{
-        "title": "BUSAG Newsletter Vol 4",
+        "title": "The xT Transfer Algorithm: Viktor Gyökeres to Arsenal",
         "subtitle": "",
-        "excerpt": "<p>Updates for the Coming Weeks</p>",
-        "content": "&lt;center&gt; Updates for the Coming Weeks Hello everyone! As we begin to wrap up the semester, we wanted to share the dates for our final few meetings/events of the year:...",
+        "excerpt": "<p>Check out Tejas’s latest blog post on his sports analytics research</p>",
+        "content": "Read the Full Article",
         "categories": [],
-        "date": "2025-04-03",
+        "date": "2025-08-18",
         "tags": [],
-        "url": "https://bu-sports-analytics.github.io/20250403_newsletter5/",
+        "url": "https://bu-sports-analytics.github.io/20250818_tejas-xt/",
         "img": null
       },{
         "title": "Markdown cheatsheet",
