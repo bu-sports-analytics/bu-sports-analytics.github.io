@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 	<channel>
-		<title>BU Sports Analytics group | Boston University Sports Analytics Group</title>
+		<title>Sports Analytics Group @ BU | Sports Analytics Group at Boston University</title>
 		<generator>(c) Chulapa Jekyll Theme RSS generator</generator>
 		<link>https://bu-sports-analytics.github.io/</link>
-		<description>Official website of Boston University Sports Analytics Group, an undergraduate club for students who love sports analytics</description>
+		<description>Official website of the Sports Analytics Group @ BU, an undergraduate club for students who love sports analytics</description>
 		<language>en-US</language>
-		<copyright>(c) 2025, BU Sports Analytics Group</copyright>	
-		<pubDate>Mon, 18 Aug 2025 11:37:20 -0400</pubDate>
-		<lastBuildDate>Mon, 18 Aug 2025 11:37:20 -0400</lastBuildDate>
+		<copyright>(c) 2025, Sports Analytics Group @ BU</copyright>	
+		<pubDate>Mon, 18 Aug 2025 11:41:57 -0400</pubDate>
+		<lastBuildDate>Mon, 18 Aug 2025 11:41:57 -0400</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://bu-sports-analytics.github.io/rss.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<title>BU Sports Analytics group | Boston University Sports Analytics Group</title>
+			<title>Sports Analytics Group @ BU | Sports Analytics Group at Boston University</title>
 			<url>https://bu-sports-analytics.github.io/assets/sag_logo_square.png</url>
 			<link>https://bu-sports-analytics.github.io/</link>
-			<description>Official website of Boston University Sports Analytics Group, an undergraduate club for students who love sports analytics</description>
+			<description>Official website of the Sports Analytics Group @ BU, an undergraduate club for students who love sports analytics</description>
 		</image><item>
 			<title>The xT Transfer Algorithm: Viktor Gyökeres to Arsenal</title>
 			<description>
