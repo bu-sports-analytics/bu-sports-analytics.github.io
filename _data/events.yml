@@ -1,0 +1,32 @@
+upcoming:
+  - title: "General Meeting"
+    date: "September 24th"
+    time: "6:00 PM - 7:00 PM"
+    location: "CAS B18"
+    description: "We'll be covering more sports news and start covering some back stats and data concepts!"
+    image: null
+
+  - title: "Adam Darowski - Executive Director of Design for Sports Reference"
+    date: "October 6th"
+    time: "7:00 PM - 8:00 PM"
+    location: "HAR 306"
+    description: "A talk from a leader in the sports data industry."
+    image: null
+
+  - title: "General Meeting"
+    date: "Wednesday, October 15th"
+    time: "TBD"
+    location: "Room TBD"
+    description: "Stay tuned for more details!"
+    image: null
+
+past:
+  - title: "Splash"
+    date: "September 6th"
+    description: "Meet us at Splash!"
+    image: "https://www.bu.edu/files/2022/09/thumbnail-1.jpg"
+
+  - title: "First General Meeting"
+    date: "September 10th"
+    description: "Our kickoff meeting for the semester."
+    image: null

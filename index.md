@@ -55,29 +55,38 @@ On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitema
     </div>
   </div>
 
-  <!-- Upcoming Events Section -->
+   <!-- Upcoming Events Section -->
+  <hr class="my-5" style="border-top: 1px solid #444;">
   <div class="row text-center mb-5">
     <div class="col-12">
       <h2 class="display-4">Upcoming Events</h2>
     </div>
   </div>
   <div class="row g-4 justify-content-center">
-    <!-- Splash Event Card -->
+    {% for event in site.data.events.upcoming limit:1 %}
     <div class="col-md-6 col-lg-4">
       <div class="card text-white bg-dark h-100">
-        <img src="https://www.bu.edu/files/2022/09/thumbnail-1.jpg" class="card-img-top" alt="BU Splash Event" style="object-fit: cover; width: 100%; height: 300px; border-bottom: 1px solid #444;">
+        {% if event.image %}
+        <img src="{{ event.image }}" class="card-img-top" alt="{{ event.title }}" style="object-fit: cover; width: 100%; height: 300px; border-bottom: 1px solid #444;">
+        {% endif %}
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title mb-1">Splash</h5>
-          <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">September 6th</h6>
-          <p class="card-text mb-3">Meet us at Splash!</p>
+          <h5 class="card-title mb-1">{{ event.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">{{ event.date }}</h6>
+          <p class="card-text mb-3">
+            {{ event.description }}<br>
+            <strong>Time:</strong> {{ event.time }}<br>
+            <strong>Location:</strong> {{ event.location }}
+          </p>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
   <div class="row text-center mt-4">
     <div class="col-12">
       <a href="/events/" class="btn btn-lg" style="background-color: #cc0000; color: white;">View All Events</a>
     </div>
   </div>
+
 
 </main>
