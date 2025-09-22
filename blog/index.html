@@ -87,29 +87,29 @@ og_image: /assets/img/site/banner-blog.png
 
 
 <!-- ================== SECTION 2: NON-PAGINATED UPDATES ================== -->
-    
-<!-- Latest Updates Section -->
+    <!-- Latest Updates Section -->
 <hr class="my-5" style="border-top: 1px solid #444;">
 <div class="row text-center mb-5">
   <div class="col-12">
     <h2 class="display-4">Latest Updates</h2>
   </div>
 </div>
-<div class="column justify-content-center">
-  <div class="col-12">
-    <div class="row">
-      {% for update in site.updates | limit:3 %}
-      <br><br>
-      <div class="col-lg-4 mb-4">
-        <div class="card text-white bg-dark h-100">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{ update.title }}</h5>
-            <p class="card-text flex-grow-1">{{ update.excerpt }}</p>
-            <a href="{{ update.url | relative_url }}" class="btn mt-auto" style="background-color: #cc0000; color: white;">Read More</a>
-          </div>
+<div class="row justify-content-center">
+  <!-- This single, centered column will contain all the update cards -->
+  <div class="col-md-10 col-lg-8">
+    
+    <!-- The 'reverse' filter sorts the updates from newest to oldest -->
+    {% for update in site.updates | reverse | limit:3 %}
+
+      <!-- Each card now stacks vertically, with a bottom margin (mb-4) for spacing -->
+      <div class="card text-white bg-dark h-100 mb-4">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ update.title }}</h5>
+          <p class="card-text flex-grow-1">{{ update.excerpt }}</p>
+          <a href="{{ update.url | relative_url }}" class="btn mt-auto" style="background-color: #cc0000; color: white;">Read More</a>
         </div>
       </div>
-      {% endfor %}
-    </div>
+
+    {% endfor %}
   </div>
 </div>
