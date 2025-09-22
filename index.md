@@ -63,7 +63,7 @@ On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitema
     </div>
   </div>
   <div class="row g-4 justify-content-center">
-    {% for event in site.data.events.upcoming limit:1 %}
+    {% for event in site.data.events.upcoming limit:3 %}
     <div class="col-md-6 col-lg-4">
       <div class="card text-white bg-dark h-100">
         {% if event.image %}
