@@ -171,6 +171,8 @@ collections:
   cheatsheet:
     output: true
     permalink: /cheatsheets/:name
+  updates:
+    output: true
 collections_dir     : 
 permalink           : /:year:month:day_:title/
 
