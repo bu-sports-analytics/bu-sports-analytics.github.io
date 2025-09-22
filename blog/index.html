@@ -7,17 +7,23 @@ og_image: /assets/img/site/banner-blog.png
 ---
 <!-- Chulapa template for pagination -->
 {%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+
+<!-- ================== SECTION 1: PAGINATED POSTS ================== -->
 <main class="container-lg pb-3 flex-fill">
+  <h1 class="text-center">Blog Posts</h1>
   <div class="row pt-2 mt-3">
     <section class="col-md-8 offset-md-2">
+    <!-- This correctly uses the paginator for your posts -->
     {% include_cached components/indexcards.html cacheddocs=paginator.posts  cachedlimit=site.paginate %}
     </section>
   </div>
 </main>
-{%- assign max_per_page = site.paginator_maxnum |
-                         default: 3 | at_least: 2 |
-                         at_most : paginator.total_pages -%}
 
+<!-- Pagination controls for the Blog Posts above -->
+{%- assign max_per_page = site.paginator_maxnum | 
+                         default: 3 | at_least: 2 | 
+                         at_most : paginator.total_pages -%}
+                         
 {%- assign prelast = paginator.total_pages | minus: 1 -%}
 
 {%- if paginator.page < max_per_page -%}
@@ -59,7 +65,7 @@ og_image: /assets/img/site/banner-blog.png
                     <li class="d-flex flex-grow-1">
                     <ul class="list-unstyled d-flex flex-grow-1 justify-content-center chulapa-pagination-inner">
                       {% for num in (init..end) -%}
-
+                      
                         <li class="page-item {% if num== paginator.page %} active {%- endif -%}">
                           <a class="page-link border-0 rounded-0" href="{%- if num == 1 -%}{{- site.paginate_path | relative_url | replace: '/page:num/', '' -}}
                           {%- else  -%}{{- site.paginate_path | relative_url | replace: ':num', num -}}{%- endif -%}
@@ -79,13 +85,17 @@ og_image: /assets/img/site/banner-blog.png
             </nav>
 {%- endif %}
 
-<!-- ===== Second Group (Updates) Corrected ===== -->
+
+<!-- ================== SECTION 2: NON-PAGINATED UPDATES ================== -->
 <main class="container-lg pb-3 flex-fill">
-  <div class="row pt-2 mt-3">
-    <hr class="col-md-8 offset-md-2 my-5">
-    <h2 class="text-center col-12">Updates</h2>
+  <div class="row pt-2 mt-5">
+    <hr class="col-md-8 offset-md-2">
+    <h2 class="text-center col-12 mt-5">Updates</h2>
     <section class="col-md-8 offset-md-2">
+    <!-- This pulls ALL documents from the _updates folder. -->
+    <!-- It uses site.updates, NOT paginator.updates -->
     {% include_cached components/indexcards.html cacheddocs=site.updates %}
     </section>
   </div>
 </main>
+<!-- Note there is no second pagination block here. -->
