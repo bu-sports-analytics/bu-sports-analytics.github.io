@@ -18,8 +18,8 @@
       },
       "headline": "Blog",
       "image": "https://bu-sports-analytics.github.io/assets/img/site/banner-blog.png",
-      "datePublished": "2025-09-22T04:54:47-04:00",
-      "dateModified": "2025-09-22T04:54:47-04:00",
+      "datePublished": "2025-09-22T05:01:07-04:00",
+      "dateModified": "2025-09-22T05:01:07-04:00",
       "author": {
         "@type": "Person",
         "name": "Sports Analytics Group @ BU"
@@ -173,9 +173,12 @@
 			</div>
 		</div>
 	</div>
-</header><main class="container-lg pb-3 flex-fill">
+</header><!-- ================== SECTION 1: PAGINATED POSTS ================== -->
+<main class="container-lg pb-3 flex-fill">
+ <h1 class="text-center">Blog Posts</h1>
  <div class="row pt-2 mt-3">
    <section class="col-md-8 offset-md-2">
+    <!-- This correctly uses the paginator for your posts -->
 <div class="col-12 mb-2">
 <div class="card chulapa-border-card-index">
 	<div class="row g-0">
@@ -215,15 +218,19 @@
    </section>
  </div>
 </main>
-<!-- ===== Second Group (Updates) Corrected ===== -->
+<!-- Pagination controls for the Blog Posts above -->
+<!-- ================== SECTION 2: NON-PAGINATED UPDATES ================== -->
 <main class="container-lg pb-3 flex-fill">
- <div class="row pt-2 mt-3">
-   <hr class="col-md-8 offset-md-2 my-5">
-   <h2 class="text-center col-12">Updates</h2>
+ <div class="row pt-2 mt-5">
+   <hr class="col-md-8 offset-md-2">
+   <h2 class="text-center col-12 mt-5">Updates</h2>
    <section class="col-md-8 offset-md-2">
+    <!-- This pulls ALL documents from the _updates folder. -->
+    <!-- It uses site.updates, NOT paginator.updates -->
    </section>
  </div>
-</main><!-- Footer -->
+</main>
+<!-- Note there is no second pagination block here. --><!-- Footer -->
  <footer class="footer-chulapa text-center mt-0 pt-3">
    <div class="container">
      <div class="row">
