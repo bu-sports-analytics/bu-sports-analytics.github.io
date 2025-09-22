@@ -98,7 +98,7 @@ og_image: /assets/img/site/banner-blog.png
 <div class="row justify-content-center">
   <div class="col-12">
     <div class="row">
-{% for update in site.updates | sort: "date" | reverse | limit:4 %}
+{% for update in site.updates | sort: "date" %}
       <div class="col-lg-4 mb-4">
         <br>
         <div class="card text-white bg-dark h-100">
