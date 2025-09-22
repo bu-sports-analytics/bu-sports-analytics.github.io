@@ -98,9 +98,9 @@ og_image: /assets/img/site/banner-blog.png
 <div class="row justify-content-center">
   <div class="col-12">
     <div class="row">
-      {% for update in site.updates | limit:3 %}
-      <br><br>
+      {% for update in site.updates | reverse | limit:3 %}
       <div class="col-lg-4 mb-4">
+        <br>
         <div class="card text-white bg-dark h-100">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{ update.title }}</h5>
