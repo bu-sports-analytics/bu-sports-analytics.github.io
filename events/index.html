@@ -12,7 +12,7 @@ title: Events
 
 <div class="container py-5">
   <h1 class="text-center mb-5">Upcoming Events</h1>
-  <div class="row g-4 justify-content-center">
+<div class="row g-4 justify-content-center">
 
     <!-- This loop generates all UPCOMING event cards -->
     {% for event in site.data.events.upcoming %}
@@ -90,10 +90,19 @@ title: Events
 
 <!-- 3. Add FullCalendar's JavaScript just before your closing </body> tag -->
 <!-- Again, this is best placed in your main layout file (_layouts/default.html) -->
+
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 
 <script>
   // 4. This script initializes the calendar
+  (function() {
+  if (!document.querySelector('link[href*="fullcalendar"]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/main.min.css';
+    document.head.appendChild(link);
+  }
+})();
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
