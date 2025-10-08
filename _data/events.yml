@@ -1,20 +1,20 @@
 upcoming:
   - title: "General Meeting"
-    date: "September 24th"
+    date: "2025-09-24"
     time: "6:00 PM - 7:00 PM"
     location: "CAS B18"
     description: "We'll be covering more sports news and start covering some more stats and data concepts!"
     image: null
 
   - title: "Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference"
-    date: "October 6th"
+    date: "2025-10-06"
     time: "7:00 PM - 8:00 PM"
     location: "HAR 306"
     description: null
     image: "/assets/adam_darowski.jpeg"
 
   - title: "General Meeting"
-    date: "Wednesday, October 15th"
+    date: "2025-10-08"
     time: "TBD"
     location: "Room TBD"
     description: null
@@ -22,11 +22,11 @@ upcoming:
 
 past:
   - title: "Splash"
-    date: "September 6th"
+    date: "2025-09-06"
     description: "Meet us at Splash!"
     image: "https://www.bu.edu/files/2022/09/thumbnail-1.jpg"
 
   - title: "First General Meeting"
-    date: "September 10th"
+    date: "2025-09-10"
     description: null
     image: null

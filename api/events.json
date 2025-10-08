@@ -1,0 +1,14 @@
+---
+layout: null
+---
+[
+  {% assign all_events = site.data.events.upcoming | concat: site.data.events.past %}
+  {% for event in all_events %}
+    {
+      "title": "{{ event.title | escape }}",
+      "start": "{{ event.date }}"
+      {% if event.time %}, "description": "{{ event.time }} in {{ event.location }}" {% endif %}
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
