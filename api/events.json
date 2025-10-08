@@ -5,6 +5,7 @@
       "title": "General Meeting",
       "start": "2025-09-24"
       , "description": "6:00 PM - 7:00 PM in CAS B18" 
+      
     }
     ,
   
@@ -12,6 +13,7 @@
       "title": "Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference",
       "start": "2025-10-06"
       , "description": "7:00 PM - 8:00 PM in HAR 306" 
+      , "image": "/assets/adam_darowski.jpeg" 
     }
     ,
   
@@ -19,6 +21,7 @@
       "title": "General Meeting",
       "start": "2025-10-08"
       , "description": "TBD in Room TBD" 
+      
     }
     ,
   
@@ -26,12 +29,14 @@
       "title": "Splash",
       "start": "2025-09-06"
       
+      , "image": "https://www.bu.edu/files/2022/09/thumbnail-1.jpg" 
     }
     ,
   
     {
       "title": "First General Meeting",
       "start": "2025-09-10"
+      
       
     }
     
