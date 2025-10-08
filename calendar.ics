@@ -9,58 +9,30 @@ X-WR-CALDESC:Events from BU Sports Analytics Group
 
 BEGIN:VEVENT
 UID:2025-09-24-general-meeting@busportsanalytics.com
-DTSTAMP:20251008T173315Z
-
-
-
-
-
-
-
-
-DTSTART:20250924T1800PM00
-
-
-
-
-
-DTEND:20250924T1900PM00
-
-
+DTSTAMP:20251008T173514Z
+DTSTART;VALUE=DATE:20250924
+DTEND;VALUE=DATE:20250924
 SUMMARY:General Meeting
 
 LOCATION:CAS B18
 
 
-DESCRIPTION:We'll be covering more sports news and start covering some more stats and data concepts!
+DESCRIPTION:We'll be covering more sports news and start covering some more stats and data concepts! Time: 6:00 PM - 7:00 PM
 
 
 END:VEVENT
 
 BEGIN:VEVENT
 UID:2025-10-06-guest-speaker-event-w-adam-darowski-executive-director-of-design-for-sports-reference@busportsanalytics.com
-DTSTAMP:20251008T173315Z
-
-
-
-
-
-
-
-
-DTSTART:20251006T1900PM00
-
-
-
-
-
-DTEND:20251006T2000PM00
-
-
+DTSTAMP:20251008T173514Z
+DTSTART;VALUE=DATE:20251006
+DTEND;VALUE=DATE:20251006
 SUMMARY:Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference
 
 LOCATION:HAR 306
 
+
+DESCRIPTION:Time: 7:00 PM - 8:00 PM
 
 
 ATTACH:https://bu-sports-analytics.github.io/assets/adam_darowski.jpeg
@@ -69,33 +41,24 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:2025-10-08-general-meeting@busportsanalytics.com
-DTSTAMP:20251008T173315Z
-
-
-
-
-
+DTSTAMP:20251008T173514Z
 DTSTART;VALUE=DATE:20251008
-
-
 DTEND;VALUE=DATE:20251008
-
-
 SUMMARY:General Meeting
 
 LOCATION:Room TBD
 
+
+DESCRIPTION:Time: TBD
 
 
 END:VEVENT
 
 BEGIN:VEVENT
 UID:2025-09-06-splash@busportsanalytics.com
-DTSTAMP:20251008T173315Z
-
+DTSTAMP:20251008T173514Z
 DTSTART;VALUE=DATE:20250906
 DTEND;VALUE=DATE:20250906
-
 SUMMARY:Splash
 
 
@@ -108,11 +71,9 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:2025-09-10-first-general-meeting@busportsanalytics.com
-DTSTAMP:20251008T173315Z
-
+DTSTAMP:20251008T173514Z
 DTSTART;VALUE=DATE:20250910
 DTEND;VALUE=DATE:20250910
-
 SUMMARY:First General Meeting
 
 
