@@ -1,0 +1,122 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BU Sports Analytics//Events Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BU Sports Analytics Events
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Events from BU Sports Analytics Group
+
+BEGIN:VEVENT
+UID:2025-09-24-general-meeting@busportsanalytics.com
+DTSTAMP:20251008T172910Z
+
+
+
+
+
+
+
+
+DTSTART:20250924T1800PM00
+
+
+
+
+
+DTEND:20250924T1900PM00
+
+
+SUMMARY:General Meeting
+
+LOCATION:CAS B18
+
+
+DESCRIPTION:We'll be covering more sports news and start covering some more stats and data concepts!
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-10-06-guest-speaker-event-w-adam-darowski-executive-director-of-design-for-sports-reference@busportsanalytics.com
+DTSTAMP:20251008T172910Z
+
+
+
+
+
+
+
+
+DTSTART:20251006T1900PM00
+
+
+
+
+
+DTEND:20251006T2000PM00
+
+
+SUMMARY:Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference
+
+LOCATION:HAR 306
+
+
+
+ATTACH:https://bu-sports-analytics.github.io/assets/adam_darowski.jpeg
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-10-08-general-meeting@busportsanalytics.com
+DTSTAMP:20251008T172910Z
+
+
+
+
+
+DTSTART;VALUE=DATE:20251008
+
+
+DTEND;VALUE=DATE:20251008
+
+
+SUMMARY:General Meeting
+
+LOCATION:Room TBD
+
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-09-06-splash@busportsanalytics.com
+DTSTAMP:20251008T172910Z
+
+DTSTART;VALUE=DATE:20250906
+DTEND;VALUE=DATE:20250906
+
+SUMMARY:Splash
+
+
+DESCRIPTION:Meet us at Splash!
+
+
+ATTACH:https://www.bu.edu/files/2022/09/thumbnail-1.jpg
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-09-10-first-general-meeting@busportsanalytics.com
+DTSTAMP:20251008T172910Z
+
+DTSTART;VALUE=DATE:20250910
+DTEND;VALUE=DATE:20250910
+
+SUMMARY:First General Meeting
+
+
+
+END:VEVENT
+
+END:VCALENDAR
