@@ -2,36 +2,6 @@
 layout: minimal
 title: Events
 ---
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"><style>
-<style>
-  .calendar-wrapper {
-    max-width: 800px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  
-  .flatpickr-calendar {
-    width: 100% !important;
-    box-shadow: none !important;
-  }
-  
-  .flatpickr-months {
-    padding: 10px 0;
-  }
-  
-  .flatpickr-current-month {
-    font-size: 1.5rem;
-  }
-  
-  .flatpickr-day {
-    height: 50px;
-    line-height: 50px;
-    font-size: 1rem;
-  }
-</style>
 <div class="container py-5">
   <h1 class="text-center mb-5">Upcoming Events</h1>
 <div class="row g-4 justify-content-center">
@@ -108,21 +78,5 @@ title: Events
   <div class="container py-5">
   <h1 class="text-center mb-5">Event Calendar</h1>
     
-  <div class="calendar-wrapper">
-    <input type="text" id="calendar" placeholder="Select a date">
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    flatpickr("#calendar", {
-      inline: true,
-      static: true,
-      // You can add event dates here later
-      enable: []
-    });
-  });
-</script>
+ <iframe src="https://calendar.google.com/calendar/embed?src=osdv9qi5iu7i244ihlko5t08kruk4u1j%40import.calendar.google.com&ctz=Europe%2FAmsterdam" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
