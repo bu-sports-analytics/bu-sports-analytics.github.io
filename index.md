@@ -27,8 +27,8 @@ On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitema
 
 
 <main class="container-lg py-5">
-{% assign today_date = site.time | date: "%Y-%m-%d" %}
-{% assign upcoming_events = site.data.events2.events | where_exp: "event", "event.date >= today_date" | sort: "date" %
+ {% assign today_date = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming_events = site.data.events2.events | where_exp: "event", "event.date >= today_date" | sort: "date" %}
 
    <!-- Upcoming Events Section -->
   <hr class="my-5" style="border-top: 1px solid #444;">
