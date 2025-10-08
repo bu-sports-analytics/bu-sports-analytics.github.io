@@ -5,7 +5,7 @@ events:
     location: "CAS B18"
     description: "We'll be covering more sports news and start covering some more stats and data concepts!"
     image: null
-    
+
   - title: "Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference"
     date: "2025-10-06"
     time: "7:00 PM - 8:00 PM"
@@ -29,3 +29,9 @@ events:
     date: "2025-09-10"
     description: null
     image: null
+
+  - title: "Cincinnati Reds @ SAGBU"
+  - date: "2025-09-26"
+  - description: "Speaker Event with members of the Reds baseball analytics department!"
+  - image: null
+  - time: "2PM in SHA 210"
