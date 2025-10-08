@@ -13,9 +13,11 @@ title: Events
 <div class="container py-5">
   <h1 class="text-center mb-5">Upcoming Events</h1>
 <div class="row g-4 justify-content-center">
+ {% assign today_date = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming_events = site.data.events2.events | where_exp: "event", "event.date >= today_date" | sort: "date" %}
 
     <!-- This loop generates all UPCOMING event cards -->
-    {% for event in site.data.events.upcoming %}
+    {% for event in upcoming_events %}
     <div class="col-md-6 col-lg-4">
       <div class="card text-white bg-dark h-100">
         
