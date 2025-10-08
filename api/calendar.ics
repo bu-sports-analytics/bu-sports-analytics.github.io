@@ -14,46 +14,16 @@ X-WR-CALDESC:Events from BU Sports Analytics Group
 BEGIN:VEVENT
 UID:{{ event.date }}-{{ event.title | slugify }}@busportsanalytics.com
 DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
-{% if event.time %}
-{% assign time_parts = event.time | split: " - " %}
-{% assign start_time = time_parts[0] | replace: " ", "" %}
-{% assign end_time = time_parts[1] | replace: " ", "" %}
-{% if start_time contains "PM" and start_time contains ":" %}
-{% assign hour = start_time | split: ":" | first | plus: 0 %}
-{% if hour != 12 %}{% assign hour = hour | plus: 12 %}{% endif %}
-{% assign minute = start_time | split: ":" | last | split: " " | first %}
-DTSTART:{{ event.date | remove: "-" }}T{% if hour < 10 %}0{% endif %}{{ hour }}{{ minute }}00
-{% elsif start_time contains "AM" and start_time contains ":" %}
-{% assign hour = start_time | split: ":" | first | plus: 0 %}
-{% if hour == 12 %}{% assign hour = 0 %}{% endif %}
-{% assign minute = start_time | split: ":" | last | split: " " | first %}
-DTSTART:{{ event.date | remove: "-" }}T{% if hour < 10 %}0{% endif %}{{ hour }}{{ minute }}00
-{% else %}
-DTSTART;VALUE=DATE:{{ event.date | remove: "-" }}
-{% endif %}
-{% if end_time contains "PM" and end_time contains ":" %}
-{% assign hour = end_time | split: ":" | first | plus: 0 %}
-{% if hour != 12 %}{% assign hour = hour | plus: 12 %}{% endif %}
-{% assign minute = end_time | split: ":" | last | split: " " | first %}
-DTEND:{{ event.date | remove: "-" }}T{% if hour < 10 %}0{% endif %}{{ hour }}{{ minute }}00
-{% elsif end_time contains "AM" and end_time contains ":" %}
-{% assign hour = end_time | split: ":" | first | plus: 0 %}
-{% if hour == 12 %}{% assign hour = 0 %}{% endif %}
-{% assign minute = end_time | split: ":" | last | split: " " | first %}
-DTEND:{{ event.date | remove: "-" }}T{% if hour < 10 %}0{% endif %}{{ hour }}{{ minute }}00
-{% else %}
-DTEND;VALUE=DATE:{{ event.date | remove: "-" }}
-{% endif %}
-{% else %}
 DTSTART;VALUE=DATE:{{ event.date | remove: "-" }}
 DTEND;VALUE=DATE:{{ event.date | remove: "-" }}
-{% endif %}
 SUMMARY:{{ event.title | replace: ",", "\," }}
 {% if event.location %}
 LOCATION:{{ event.location | replace: ",", "\," }}
 {% endif %}
 {% if event.description %}
-DESCRIPTION:{{ event.description | replace: ",", "\," | replace: "\n", "\\n" }}
+DESCRIPTION:{{ event.description | replace: ",", "\," | replace: "\n", "\\n" }}{% if event.time %} Time: {{ event.time }}{% endif %}
+{% elsif event.time %}
+DESCRIPTION:Time: {{ event.time }}
 {% endif %}
 {% if event.image %}
 ATTACH:{{ event.image | absolute_url }}
