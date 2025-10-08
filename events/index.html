@@ -18,8 +18,8 @@
       },
       "headline": "Events",
       "image": "https://bu-sports-analytics.github.io/assets/sag_logo_square.png",
-      "datePublished": "2025-10-08T16:18:27-04:00",
-      "dateModified": "2025-10-08T16:18:27-04:00",
+      "datePublished": "2025-10-08T16:20:45-04:00",
+      "dateModified": "2025-10-08T16:20:45-04:00",
       "author": {
         "@type": "Person",
         "name": "Sports Analytics Group @ BU"
@@ -165,7 +165,13 @@
 							<i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Search</span>
 						</a>
 					</li></ul></div>
-</nav><div class="container py-5">
+</nav><style>
+  #calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+</style>
+<div class="container py-5">
  <h1 class="text-center mb-5">Upcoming Events</h1>
  <div class="row g-4 justify-content-center">
     <!-- This loop generates all UPCOMING event cards -->
@@ -236,6 +242,85 @@
       <script async src="//www.instagram.com/embed.js"></script>
    </div>
  </div>
+ <div class="container py-5">
+ <h1 class="text-center mb-5">Event Calendar</h1>
+  <!-- 2. This is where the calendar will be rendered -->
+ <div id='calendar'></div>
+ <hr class="my-5">
+ <h1 class="text-center mb-5">Event List</h1>
+  <!-- We can keep the card list as a supplement to the calendar -->
+ <h2 class="text-center mb-4">Upcoming</h2>
+ <div class="row g-4 justify-content-center">
+     <div class="col-md-6 col-lg-4">
+       <div class="card text-white bg-dark h-100">
+         <div class="card-body">
+           <h5 class="card-title mb-1">General Meeting</h5>
+           <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">September 24, 2025</h6>
+           <p class="card-text">6:00 PM - 7:00 PM in CAS B18</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-6 col-lg-4">
+       <div class="card text-white bg-dark h-100">
+          <img src="/assets/adam_darowski.jpeg" class="card-img-top" alt="Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference" style="object-fit: cover; width: 100%; height: 200px; border-bottom: 1px solid #444;">
+         <div class="card-body">
+           <h5 class="card-title mb-1">Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference</h5>
+           <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">October 06, 2025</h6>
+           <p class="card-text">7:00 PM - 8:00 PM in HAR 306</p>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-6 col-lg-4">
+       <div class="card text-white bg-dark h-100">
+         <div class="card-body">
+           <h5 class="card-title mb-1">General Meeting</h5>
+           <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">October 08, 2025</h6>
+           <p class="card-text">TBD in Room TBD</p>
+         </div>
+       </div>
+     </div>
+ </div>
+ <h2 class="text-center mt-5 mb-4">Past</h2>
+ <div class="row g-4 justify-content-center">
+     <div class="col-md-6 col-lg-4">
+       <div class="card text-white bg-dark h-100">
+          <img src="https://www.bu.edu/files/2022/09/thumbnail-1.jpg" class="card-img-top" alt="Splash" style="object-fit: cover; width: 100%; height: 200px; border-bottom: 1px solid #444;">
+         <div class="card-body">
+           <h5 class="card-title mb-1">Splash</h5>
+           <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">September 06, 2025</h6>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-6 col-lg-4">
+       <div class="card text-white bg-dark h-100">
+         <div class="card-body">
+           <h5 class="card-title mb-1">First General Meeting</h5>
+           <h6 class="card-subtitle mb-2 text-muted" style="color: #bbb !important;">September 10, 2025</h6>
+         </div>
+       </div>
+     </div>
+ </div>
+</div>
+<!-- 3. Add FullCalendar's JavaScript just before your closing</body>tag -->
+<!-- Again, this is best placed in your main layout file (_layouts/default.html) -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<script>
+  // 4. This script initializes the calendar
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,listWeek'
+      },
+      // This is the magic part! It tells the calendar to fetch your JSON file.
+      events: '/api/events.json'
+    });
+    calendar.render();
+  });
+</script>
 </div><!-- Footer -->
  <footer class="footer-chulapa text-center mt-0 pt-3">
    <div class="container">
