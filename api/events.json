@@ -8,6 +8,7 @@ layout: null
       "title": "{{ event.title | escape }}",
       "start": "{{ event.date }}"
       {% if event.time %}, "description": "{{ event.time }} in {{ event.location }}" {% endif %}
+      {% if event.image %}, "image": "{{ event.image }}" {% endif %}
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}
