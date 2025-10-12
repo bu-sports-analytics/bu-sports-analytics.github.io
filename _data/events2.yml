@@ -35,3 +35,10 @@ events:
     description: "Speaker Event with members of the Reds baseball analytics department!"
     image: null
     time: "2PM in SHA 210"
+
+  - title: "Halloween-Themed General Meeting"
+    date: "2025-10-22"
+    time: "TBD"
+    location: "TBD"
+    description: null
+    image: null
