@@ -8,8 +8,19 @@ X-WR-TIMEZONE:America/New_York
 X-WR-CALDESC:Events from BU Sports Analytics Group
 
 BEGIN:VEVENT
+UID:2025-09-10-first-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20250910
+DTEND;VALUE=DATE:20250910
+SUMMARY:First General Meeting
+
+
+
+END:VEVENT
+
+BEGIN:VEVENT
 UID:2025-09-24-general-meeting@busportsanalytics.com
-DTSTAMP:20251012T182112Z
+DTSTAMP:20260219T104527Z
 DTSTART;VALUE=DATE:20250924
 DTEND;VALUE=DATE:20250924
 SUMMARY:General Meeting
@@ -23,8 +34,21 @@ DESCRIPTION:We'll be covering more sports news and start covering some more stat
 END:VEVENT
 
 BEGIN:VEVENT
+UID:2025-09-26-cincinnati-reds-sagbu@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20250926
+DTEND;VALUE=DATE:20250926
+SUMMARY:Cincinnati Reds @ SAGBU
+
+
+DESCRIPTION:Speaker Event with members of the Reds baseball analytics department! Time: 2PM in SHA 210
+
+
+END:VEVENT
+
+BEGIN:VEVENT
 UID:2025-10-06-guest-speaker-event-w-adam-darowski-executive-director-of-design-for-sports-reference@busportsanalytics.com
-DTSTAMP:20251012T182112Z
+DTSTAMP:20260219T104527Z
 DTSTART;VALUE=DATE:20251006
 DTEND;VALUE=DATE:20251006
 SUMMARY:Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference
@@ -40,70 +64,164 @@ ATTACH:https://bu-sports-analytics.github.io/assets/adam_darowski.jpeg
 END:VEVENT
 
 BEGIN:VEVENT
-UID:2025-10-08-general-meeting@busportsanalytics.com
-DTSTAMP:20251012T182112Z
+UID:2025-10-08-intro-to-coding-with-python-pandas@busportsanalytics.com
+DTSTAMP:20260219T104527Z
 DTSTART;VALUE=DATE:20251008
 DTEND;VALUE=DATE:20251008
-SUMMARY:General Meeting
+SUMMARY:Intro to Coding with Python & Pandas
 
-LOCATION:Room TBD
-
-
-DESCRIPTION:Time: TBD
+LOCATION:SAR 103
 
 
-END:VEVENT
-
-BEGIN:VEVENT
-UID:2025-09-06-splash@busportsanalytics.com
-DTSTAMP:20251012T182112Z
-DTSTART;VALUE=DATE:20250906
-DTEND;VALUE=DATE:20250906
-SUMMARY:Splash
-
-
-DESCRIPTION:Meet us at Splash!
-
-
-ATTACH:https://www.bu.edu/files/2022/09/thumbnail-1.jpg
-
-END:VEVENT
-
-BEGIN:VEVENT
-UID:2025-09-10-first-general-meeting@busportsanalytics.com
-DTSTAMP:20251012T182112Z
-DTSTART;VALUE=DATE:20250910
-DTEND;VALUE=DATE:20250910
-SUMMARY:First General Meeting
-
+DESCRIPTION:Time: 6:00 PM - 7:00 PM
 
 
 END:VEVENT
 
 BEGIN:VEVENT
-UID:2025-09-26-cincinnati-reds-sagbu@busportsanalytics.com
-DTSTAMP:20251012T182112Z
-DTSTART;VALUE=DATE:20250926
-DTEND;VALUE=DATE:20250926
-SUMMARY:Cincinnati Reds @ SAGBU
-
-
-DESCRIPTION:Speaker Event with members of the Reds baseball analytics department! Time: 2PM in SHA 210
-
-
-END:VEVENT
-
-BEGIN:VEVENT
-UID:2025-10-22-halloween-themed-general-meeting@busportsanalytics.com
-DTSTAMP:20251012T182112Z
+UID:2025-10-22-halloween-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
 DTSTART;VALUE=DATE:20251022
 DTEND;VALUE=DATE:20251022
-SUMMARY:Halloween-Themed General Meeting
+SUMMARY:Halloween General Meeting
 
-LOCATION:TBD
+LOCATION:CAS 212
 
 
-DESCRIPTION:Time: TBD
+DESCRIPTION:Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-11-05-world-series-recap-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20251105
+DTEND;VALUE=DATE:20251105
+SUMMARY:World Series Recap + General Meeting
+
+
+DESCRIPTION:Speaker Event with members of the Reds baseball analytics department! Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-11-19-punter-valuation-article-review-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20251119
+DTEND;VALUE=DATE:20251119
+SUMMARY:Punter Valuation Article Review + General Meeting
+
+LOCATION:SAR 103
+
+
+DESCRIPTION:🏈 Article Review of Tejas' Punter Valuation Statistic Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-12-03-revenge-game-analysis-article-review-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20251203
+DTEND;VALUE=DATE:20251203
+SUMMARY:Revenge Game Analysis Article Review + General Meeting
+
+LOCATION:CAS 212
+
+
+DESCRIPTION:🏀 Article Review of Stephan's Revenge Game Analysis Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2025-12-04-thursday-night-football-watch-party@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20251204
+DTEND;VALUE=DATE:20251204
+SUMMARY:Thursday Night Football Watch Party
+
+LOCATION:MUG 205
+
+
+DESCRIPTION:Watch the Thursday Night Football game with us + chat Time: 8:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2026-01-28-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260128
+SUMMARY:General Meeting
+
+LOCATION:HAR 312
+
+
+DESCRIPTION:First meeting of the semester | Chain Reaction Game | News Roundup | Intro to The WAR Room (our Academic track) Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2026-01-28-war-room-1-live-coding-war-from-scratch@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260128
+SUMMARY:WAR Room 1: Live-coding WAR from scratch
+
+LOCATION:HAR 228
+
+
+DESCRIPTION:First meeting of our academic track\, The WAR Room | Live-coding WAR from scratch Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2026-02-08-super-bowl-watch-party-w-prsa-alianza-latina@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20260208
+DTEND;VALUE=DATE:20260208
+SUMMARY:Super Bowl Watch Party w/ PRSA + Alianza Latina
+
+LOCATION:GSU Ballroom
+
+
+DESCRIPTION:Watch the Super Bowl! Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2026-02-11-general-meeting@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20260211
+DTEND;VALUE=DATE:20260211
+SUMMARY:General Meeting
+
+LOCATION:HAR 312
+
+
+DESCRIPTION:Super Bowl Recap + Games Time: 6:00 PM
+
+
+END:VEVENT
+
+BEGIN:VEVENT
+UID:2026-02-18-war-room-2-sport-groups@busportsanalytics.com
+DTSTAMP:20260219T104527Z
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260218
+SUMMARY:WAR Room 2: Sport Groups
+
+LOCATION:HAR 210
+
+
+DESCRIPTION:Second meeting of our academic track\, The WAR Room Time: 6:00 PM
 
 
 END:VEVENT
