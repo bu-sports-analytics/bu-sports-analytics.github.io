@@ -64,17 +64,199 @@ On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitema
   </div>
 
 
-  <!-- Latest Articles Section -->
+  <!-- Latest Articles Section (Substack Feed) -->
+  <style>
+    #home-substack-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #home-substack-feed .substack-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    #home-substack-feed .substack-card:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+    #home-substack-feed .substack-card:hover .substack-post {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+    #home-substack-feed .substack-post {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background-color: #1a1a2e;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    #home-substack-feed .substack-thumbnail {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    #home-substack-feed .substack-post div { flex: 1; }
+    #home-substack-feed .substack-title {
+      margin: 0 0 6px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    #home-substack-feed .substack-author {
+      margin: 0 0 4px 0;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    #home-substack-feed .substack-date {
+      margin: 0 0 6px 0;
+      font-size: 0.8rem;
+      color: #999;
+      font-style: italic;
+    }
+    #home-substack-feed .substack-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+      line-height: 1.4;
+    }
+    #home-substack-feed .substack-skeleton,
+    #home-substack-feed .substack-empty,
+    #home-substack-feed .substack-error {
+      text-align: center;
+      color: #999;
+      padding: 2rem;
+    }
+    @media (max-width: 576px) {
+      #home-substack-feed .substack-post { flex-direction: column; }
+      #home-substack-feed .substack-thumbnail { width: 100%; height: 180px; }
+    }
+  </style>
+
   <div class="row text-center mb-5">
     <div class="col-12">
       <h2 class="display-4">Latest Articles</h2>
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-12">
-      {%- include_cached components/indexcards.html cacheddocs=site.posts cachedlimit=3 -%}
+    <div class="col-md-10 offset-md-1">
+      <div id="home-substack-feed"></div>
     </div>
   </div>
+
+  <script>
+  (function () {
+    var FEEDS = [
+      'busag.substack.com',
+      'stephanmacdougall.substack.com',
+      'tr31sportsanalytics.substack.com'
+    ];
+    var MAX_POSTS = 3;
+    var container = document.getElementById('home-substack-feed');
+    if (!container) return;
+
+    var fmtDate = function(iso) {
+      try { return new Intl.DateTimeFormat(undefined, { year:'numeric', month:'short', day:'2-digit' }).format(new Date(iso)); }
+      catch(e) { return ''; }
+    };
+    var extractFirstImg = function(html) {
+      if (!html) return null;
+      var m = html.match(/<img[^>]+src="([^"]+)"/i);
+      return m ? m[1] : null;
+    };
+    var truncate = function(str, max) {
+      max = max || 140;
+      return (str && str.length > max) ? str.slice(0, max) + '\u2026' : (str || '');
+    };
+    var buildCard = function(post) {
+      var a = document.createElement('a');
+      a.className = 'substack-card';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.href = post.link;
+      var wrap = document.createElement('div');
+      wrap.className = 'substack-post';
+      var imgUrl = extractFirstImg(post.content);
+      if (imgUrl) {
+        var img = document.createElement('img');
+        img.className = 'substack-thumbnail';
+        img.loading = 'lazy';
+        img.alt = post.title || '';
+        img.src = imgUrl;
+        wrap.appendChild(img);
+      }
+      var body = document.createElement('div');
+      var h3 = document.createElement('h3');
+      h3.className = 'substack-title';
+      h3.textContent = post.title || 'Untitled';
+      body.appendChild(h3);
+      if (post.author) {
+        var pA = document.createElement('p');
+        pA.className = 'substack-author';
+        pA.textContent = 'By ' + post.author;
+        body.appendChild(pA);
+      }
+      if (post.pubDate) {
+        var pD = document.createElement('p');
+        pD.className = 'substack-date';
+        pD.textContent = fmtDate(post.pubDate);
+        body.appendChild(pD);
+      }
+      var pDesc = document.createElement('p');
+      pDesc.className = 'substack-desc';
+      pDesc.textContent = truncate(post.description, 140);
+      body.appendChild(pDesc);
+      wrap.appendChild(body);
+      a.appendChild(wrap);
+      return a;
+    };
+    var fetchFeed = function(domain) {
+      var rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://' + domain + '/feed');
+      return fetch(rssUrl).then(function(res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      }).then(function(data) {
+        if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error('Bad feed');
+        return data.items;
+      });
+    };
+    container.innerHTML = '<div class="substack-skeleton">Loading articles\u2026</div>';
+    (async function() {
+      var allPosts = [];
+      for (var i = 0; i < FEEDS.length; i++) {
+        try {
+          var items = await fetchFeed(FEEDS[i]);
+          allPosts = allPosts.concat(items);
+        } catch(e) { console.warn('Feed error:', e); }
+        await new Promise(function(r) { setTimeout(r, 300); });
+      }
+      allPosts = allPosts.filter(function(p) { return !(p.title && p.title.toLowerCase().indexOf('coming soon') >= 0); });
+      var seen = {};
+      allPosts = allPosts.filter(function(p) {
+        var key = (p.title || '').toLowerCase().trim();
+        if (seen[key]) return false;
+        seen[key] = true;
+        return true;
+      });
+      allPosts.sort(function(a, b) { return new Date(b.pubDate) - new Date(a.pubDate); });
+      allPosts = allPosts.slice(0, MAX_POSTS);
+      if (!allPosts.length) {
+        container.innerHTML = '<p class="substack-empty">No articles available.</p>';
+        return;
+      }
+      container.innerHTML = '';
+      allPosts.forEach(function(post) { container.appendChild(buildCard(post)); });
+    })();
+  })();
+  </script>
+
   <div class="row text-center mt-4">
     <div class="col-12">
       <a href="/blog/" class="btn btn-lg" style="background-color: #cc0000; color: white;">View All Articles</a>

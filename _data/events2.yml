@@ -1,10 +1,24 @@
 events:
+  - title: "First General Meeting"
+    date: "2025-09-10"
+    description: null
+    image: null
+    type: "meeting"
+
   - title: "General Meeting"
     date: "2025-09-24"
     time: "6:00 PM - 7:00 PM"
     location: "CAS B18"
     description: "We'll be covering more sports news and start covering some more stats and data concepts!"
     image: null
+    type: "meeting"
+
+  - title: "Cincinnati Reds @ SAGBU"
+    date: "2025-09-26"
+    description: "Speaker Event with members of the Reds baseball analytics department!"
+    image: null
+    time: "2PM in SHA 210"
+    type: "event"
 
   - title: "Guest Speaker event w/ Adam Darowski - Executive Director of Design for Sports Reference"
     date: "2025-10-06"
@@ -12,26 +26,93 @@ events:
     location: "HAR 306"
     description: null
     image: "/assets/adam_darowski.jpeg"
+    type: "event"
 
-  - title: "General Meeting"
+  - title: "Intro to Coding with Python & Pandas"
     date: "2025-10-08"
-    time: "TBD"
-    location: "Room TBD"
+    time: "6:00 PM - 7:00 PM"
+    location: "SAR 103"
     description: null
     image: null
+    type: "meeting"
 
-  - title: "Splash"
-    date: "2025-09-06"
-    description: "Meet us at Splash!"
-    image: "https://www.bu.edu/files/2022/09/thumbnail-1.jpg"
-
-  - title: "First General Meeting"
-    date: "2025-09-10"
+  - title: "Halloween General Meeting"
+    date: "2025-10-22"
     description: null
     image: null
-
-  - title: "Cincinnati Reds @ SAGBU"
-    date: "2025-09-26"
+    time: "6:00 PM"
+    location: "CAS 212"
+    type: "meeting"
+    
+  - title: "World Series Recap + General Meeting"
+    date: "2025-11-05"
     description: "Speaker Event with members of the Reds baseball analytics department!"
     image: null
-    time: "2PM in SHA 210"
+    time: "6:00 PM"
+    type: "meeting"
+
+  - title: "Punter Valuation Article Review + General Meeting"
+    date: "2025-11-19"
+    description: "🏈 Article Review of Tejas' Punter Valuation Statistic"
+    image: null
+    time: "6:00 PM"
+    location: "SAR 103"
+    type: "meeting"
+
+  - title: "Revenge Game Analysis Article Review + General Meeting"
+    date: "2025-12-03"
+    description: "🏀 Article Review of Stephan's Revenge Game Analysis"
+    image: null
+    time: "6:00 PM"
+    location: "CAS 212"
+    type: "meeting"
+
+  - title: "Thursday Night Football Watch Party"
+    date: "2025-12-04"
+    description: "Watch the Thursday Night Football game with us + chat"
+    image: null
+    time: "8:00 PM"
+    location: "MUG 205"
+    type: "event"
+
+  - title: "General Meeting"
+    date: "2026-01-28"
+    description: "First meeting of the semester | Chain Reaction Game | News Roundup | Intro to The WAR Room (our Academic track)"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 312"
+    type: "meeting"
+
+  - title: "WAR Room 1: Live-coding WAR from scratch"
+    date: "2026-01-28"
+    description: "First meeting of our academic track, The WAR Room | Live-coding WAR from scratch"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 228"
+    type: "meeting"
+
+  - title: "Super Bowl Watch Party w/ PRSA + Alianza Latina"
+    date: "2026-02-08"
+    description: "Watch the Super Bowl!"
+    image: null
+    time: "6:00 PM"
+    location: "GSU Ballroom"
+    type: "event"
+
+  - title: "General Meeting"
+    date: "2026-02-11"
+    description: "Super Bowl Recap + Games"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 312"
+    type: "meeting"
+
+  - title: "WAR Room 2: Sport Groups"
+    date: "2026-02-18"
+    description: "Second meeting of our academic track, The WAR Room"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 210"
+    type: "meeting"
+
+  

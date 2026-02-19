@@ -8,108 +8,394 @@ og_image: /assets/img/site/banner-blog.png
 <!-- Chulapa template for pagination -->
 {%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
 
-<!-- ================== SECTION 1: PAGINATED POSTS ================== -->
+<!-- ================== SECTION 1: SUBSTACK FEED ================== -->
+<style>
+  #substack-combined-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .substack-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .substack-card:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  .substack-card:hover .substack-post {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+  }
+  .substack-post {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a2e;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .substack-thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .substack-post div {
+    flex: 1;
+  }
+  .substack-title {
+    margin: 0 0 6px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .substack-author {
+    margin: 0 0 4px 0;
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+  .substack-date {
+    margin: 0 0 8px 0;
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+  }
+  .substack-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  .substack-error, .substack-empty {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+  }
+  .substack-skeleton {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+  }
+  @media (max-width: 576px) {
+    .substack-post {
+      flex-direction: column;
+    }
+    .substack-thumbnail {
+      width: 100%;
+      height: 200px;
+    }
+  }
+</style>
+
 <main class="container-lg pb-3 flex-fill">
-  <h1 class="text-center">Blog Posts</h1>
+  <h1 class="text-center">Articles</h1>
   <div class="row pt-2 mt-3">
-    <section class="col-md-8 offset-md-2">
-    <!-- This correctly uses the paginator for your posts -->
-    {% include_cached components/indexcards.html cacheddocs=paginator.posts  cachedlimit=site.paginate %}
+    <section class="col-md-10 offset-md-1">
+      <div id="substack-combined-feed"></div>
     </section>
   </div>
 </main>
 
-<!-- Pagination controls for the Blog Posts above -->
-{%- assign max_per_page = site.paginator_maxnum | 
-                         default: 3 | at_least: 2 | 
-                         at_most : paginator.total_pages -%}
-                         
-{%- assign prelast = paginator.total_pages | minus: 1 -%}
+<script>
+(function () {
+  const FEEDS = [
+    'busag.substack.com',
+    'stephanmacdougall.substack.com',
+    'tr31sportsanalytics.substack.com'
+  ];
+  const AUTHOR_FILTER = 'sports analytics';
+  const MAX_POSTS = 20;
+  const SHOW_IMAGES = true;
+  const SHOW_DATES = true;
 
-{%- if paginator.page < max_per_page -%}
-  {%- assign init= 1 -%}
-  {%- assign end= max_per_page -%}
-{%- elsif paginator.page == paginator.total_pages  -%}
-  {%- assign init= paginator.total_pages |
-                          minus: max_per_page | plus: 1 -%}
-  {%- assign end= paginator.total_pages -%}
-{%- else -%}
-  {%- assign init= paginator.page | minus: max_per_page | plus: 2 -%}
-  {%- assign end= paginator.page | plus: 1 -%}
-{%- endif -%}
-{%- if paginator.total_pages > 1 -%}
-	{%- if paginator.page == 1 -%}
-		{%- assign prevclass = "invisible" -%}
-		{%- assign firstclass = "invisible" -%}
-	{%- elsif paginator.page == paginator.total_pages -%}
-		{%- assign nextclass = "invisible" -%}
-		{%- assign lastclass ="invisible" -%}
-	{%- elsif paginator.page == 2 -%}
-			{%- assign firstclass = "invisible" -%}
-	{%- elsif paginator.page == prelast -%}
-			{%- assign lastclass ="invisible" -%}
-  {%- else -%}
-	{%- endif -%}
-	            <nav aria-label="Page navigation example" class="container-lg mt-4 chulapa-pagination text-center">
-                <ul class="col-md-8 offset-md-2 pagination justify-content-around ">
-                    <li class="page-item {{ firstclass }} ">
-                        <a class="page-link border-0 px-3 px-sm-4" href="{{- site.paginate_path | relative_url | replace: '/page:num/', '' -}}" tabindex="-1">
-                            <i class="fa fa-step-backward" aria-hidden="true"></i><span class="sr-only">First</span>
-                        </a>
-                    </li>
-                    <li class="page-item {{ prevclass }}">
-                        <a class="page-link border-0 px-3 px-sm-4" href="{{- paginator.previous_page_path | relative_url -}}">
-                            <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="d-flex flex-grow-1">
-                    <ul class="list-unstyled d-flex flex-grow-1 justify-content-center chulapa-pagination-inner">
-                      {% for num in (init..end) -%}
-                      
-                        <li class="page-item {% if num== paginator.page %} active {%- endif -%}">
-                          <a class="page-link border-0 rounded-0" href="{%- if num == 1 -%}{{- site.paginate_path | relative_url | replace: '/page:num/', '' -}}
-                          {%- else  -%}{{- site.paginate_path | relative_url | replace: ':num', num -}}{%- endif -%}
-                          ">{{- num -}}</a></li>
-                      {%- endfor %}
-                    </ul>
-                    </li>
-                    <li class="page-item {{ nextclass }}">
-                        <a class="page-link border-0 px-3 px-sm-4" href="{{- paginator.next_page_path | relative_url -}}">
-                            <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
-                    </li>
-                    <li class="page-item {{ lastclass }}">
-                        <a class="page-link border-0 px-3 px-sm-4" href="{{- site.paginate_path | relative_url | replace: ':num', paginator.total_pages -}}">
-                            <i class="fa fa-step-forward" aria-hidden="true"></i><span class="sr-only">Last</span></a>
-                    </li>
-                </ul>
-            </nav>
-{%- endif %}
+  const container = document.getElementById('substack-combined-feed');
+  if (!container) return;
+
+  const fmtDate = (iso) => {
+    try {
+      return new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(iso));
+    } catch { return ''; }
+  };
+
+  const extractFirstImg = (html) => {
+    if (!html) return null;
+    const m = html.match(/<img[^>]+src="([^"]+)"/i);
+    return m ? m[1] : null;
+  };
+
+  const truncate = (str, max = 160) => (str && str.length > max ? str.slice(0, max) + '…' : (str || ''));
+
+  const buildCard = (post) => {
+    const a = document.createElement('a');
+    a.className = 'substack-card';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.href = post.link;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'substack-post';
+
+    if (SHOW_IMAGES) {
+      const imgUrl = extractFirstImg(post.content);
+      if (imgUrl) {
+        const img = document.createElement('img');
+        img.className = 'substack-thumbnail';
+        img.loading = 'lazy';
+        img.alt = post.title || 'Substack post image';
+        img.src = imgUrl;
+        wrap.appendChild(img);
+      }
+    }
+
+    const body = document.createElement('div');
+
+    const h3 = document.createElement('h3');
+    h3.className = 'substack-title';
+    h3.textContent = post.title || 'Untitled';
+    body.appendChild(h3);
+
+    if (post.author) {
+      const pAuthor = document.createElement('p');
+      pAuthor.className = 'substack-author';
+      pAuthor.textContent = 'By ' + post.author;
+      body.appendChild(pAuthor);
+    }
+
+    if (SHOW_DATES && post.pubDate) {
+      const pDate = document.createElement('p');
+      pDate.className = 'substack-date';
+      pDate.textContent = fmtDate(post.pubDate);
+      body.appendChild(pDate);
+    }
+
+    const pDesc = document.createElement('p');
+    pDesc.className = 'substack-desc';
+    pDesc.textContent = truncate(post.description, 160);
+    body.appendChild(pDesc);
+
+    wrap.appendChild(body);
+    a.appendChild(wrap);
+    return a;
+  };
+
+  const fetchFeed = async (substackDomain) => {
+    const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://' + substackDomain + '/feed');
+    const res = await fetch(rssUrl);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (data.status !== 'ok' || !Array.isArray(data.items)) {
+      throw new Error(data.message || 'Bad feed');
+    }
+    return data.items;
+  };
+
+  container.innerHTML = '<div class="substack-skeleton">Loading articles…</div>';
+
+  // Fetch feeds sequentially to avoid rate-limiting
+  (async () => {
+    let allPosts = [];
+    for (const domain of FEEDS) {
+      try {
+        const items = await fetchFeed(domain);
+        allPosts = allPosts.concat(items);
+      } catch (err) {
+        console.warn('Feed error for ' + domain + ':', err);
+      }
+      // Small delay between requests to avoid rate limits
+      await new Promise(r => setTimeout(r, 300));
+    }
+
+    // Filter by author
+    // if (AUTHOR_FILTER) {
+    //   const filter = AUTHOR_FILTER.toLowerCase();
+    //   allPosts = allPosts.filter(p => p.author && p.author.toLowerCase().includes(filter));
+    // }
+    // remove Coming soon articles
+    allPosts = allPosts.filter(p => !(p.title && p.title.toLowerCase().includes('coming soon')));
+
+    // Deduplicate by title
+    const seen = new Set();
+    allPosts = allPosts.filter(p => {
+      const key = (p.title || '').toLowerCase().trim();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+    // Sort by date descending
+    allPosts.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+    // Limit
+    allPosts = allPosts.slice(0, MAX_POSTS);
+
+    if (!allPosts.length) {
+      container.innerHTML = '<p class="substack-empty">No articles available.</p>';
+      return;
+    }
+
+    container.innerHTML = '';
+    allPosts.forEach(post => container.appendChild(buildCard(post)));
+  })();
+})();
+</script>
 
 
-<!-- ================== SECTION 2: NON-PAGINATED UPDATES ================== -->
-    
-<!-- Latest Updates Section -->
+<!-- ================== SECTION 2: NEWSLETTER UPDATES (RSS) ================== -->
+
+<style>
+  #newsletter-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .newsletter-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .newsletter-card:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  .newsletter-card:hover .newsletter-post {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+  }
+  .newsletter-post {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a2e;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .newsletter-post div {
+    flex: 1;
+  }
+  .newsletter-title {
+    margin: 0 0 6px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .newsletter-date {
+    margin: 0 0 8px 0;
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+  }
+  .newsletter-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  .newsletter-error, .newsletter-empty {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+  }
+  .newsletter-skeleton {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+  }
+</style>
+
 <hr class="my-5" style="border-top: 1px solid #444;">
 <div class="row text-center mb-5">
   <div class="col-12">
     <h2 class="display-4">Latest Updates</h2>
   </div>
 </div>
-<div class="row justify-content-center">
-  <div class="col-12">
-    <div class="row">
-{% for update in site.updates | limit:4 %}
-      <div class="col-lg-4 mb-4">
-        <br>
-        <div class="card text-white bg-dark h-100">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{ update.title }}</h5>
-            <p class="card-text flex-grow-1">{{ update.excerpt }}</p>
-            <a href="{{ update.url | relative_url }}" class="btn mt-auto" style="background-color: #cc0000; color: white;">Read More</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+<div class="row pt-2 mt-3">
+  <section class="col-md-10 offset-md-1">
+    <div id="newsletter-feed"></div>
+  </section>
 </div>
+
+<script>
+(function () {
+  var FEED_URL = 'https://kill-the-newsletter.com/feeds/q700oawnovvbn6j48cbt.xml';
+  var MAX_POSTS = 6;
+  var container = document.getElementById('newsletter-feed');
+  if (!container) return;
+
+  var fmtDate = function(iso) {
+    try { return new Intl.DateTimeFormat(undefined, { year:'numeric', month:'short', day:'2-digit' }).format(new Date(iso)); }
+    catch(e) { return ''; }
+  };
+
+  var truncateHtml = function(html, max) {
+    if (!html) return '';
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    var text = tmp.textContent || tmp.innerText || '';
+    max = max || 200;
+    return text.length > max ? text.slice(0, max) + '\u2026' : text;
+  };
+
+  var buildCard = function(item) {
+    var card = document.createElement('div');
+    card.className = 'newsletter-card';
+    var wrap = document.createElement('div');
+    wrap.className = 'newsletter-post';
+    var body = document.createElement('div');
+    var h3 = document.createElement('h3');
+    h3.className = 'newsletter-title';
+    h3.textContent = item.title || 'Update';
+    body.appendChild(h3);
+    if (item.pubDate) {
+      var pD = document.createElement('p');
+      pD.className = 'newsletter-date';
+      pD.textContent = fmtDate(item.pubDate);
+      body.appendChild(pD);
+    }
+    var pDesc = document.createElement('p');
+    pDesc.className = 'newsletter-desc';
+    pDesc.textContent = truncateHtml(item.content || item.description, 200);
+    body.appendChild(pDesc);
+    wrap.appendChild(body);
+    card.appendChild(wrap);
+    return card;
+  };
+
+  container.innerHTML = '<div class="newsletter-skeleton">Loading updates\u2026</div>';
+
+  var rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED_URL);
+  fetch(rssUrl)
+    .then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function(data) {
+      if (data.status !== 'ok' || !Array.isArray(data.items)) {
+        throw new Error(data.message || 'Failed to parse feed');
+      }
+      var posts = data.items.slice(0, MAX_POSTS);
+      if (!posts.length) {
+        container.innerHTML = '<p class="newsletter-empty">No updates available yet.</p>';
+        return;
+      }
+      container.innerHTML = '';
+      posts.forEach(function(item) {
+        container.appendChild(buildCard(item));
+      });
+    })
+    .catch(function(err) {
+      console.error('Newsletter feed error:', err);
+      container.innerHTML = '<p class="newsletter-error">Could not load updates. Please try again later.</p>';
+    });
+})();
+</script>
