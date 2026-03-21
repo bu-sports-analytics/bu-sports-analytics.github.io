@@ -3,19 +3,19 @@
 	<channel>
 		<title>Sports Analytics Group @ BU | Sports Analytics Group at Boston University</title>
 		<generator>(c) Chulapa Jekyll Theme RSS generator</generator>
-		<link>https://bu-sports-analytics.github.io/</link>
+		<link>https://busportsanalytics.com/</link>
 		<description>Official website of the Sports Analytics Group @ BU, an undergraduate club for students who love sports analytics</description>
 		<language>en-US</language>
 		<copyright>(c) 2026, Sports Analytics Group @ BU</copyright>	
-		<pubDate>Thu, 19 Feb 2026 10:45:27 -0500</pubDate>
-		<lastBuildDate>Thu, 19 Feb 2026 10:45:27 -0500</lastBuildDate>
+		<pubDate>Sat, 21 Mar 2026 12:07:47 -0400</pubDate>
+		<lastBuildDate>Sat, 21 Mar 2026 12:07:47 -0400</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
-		<atom:link href="https://bu-sports-analytics.github.io/rss.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://busportsanalytics.com/rss.xml" rel="self" type="application/rss+xml" />
 		<image>
 			<title>Sports Analytics Group @ BU | Sports Analytics Group at Boston University</title>
-			<url>https://bu-sports-analytics.github.io/assets/sag_logo_square.png</url>
-			<link>https://bu-sports-analytics.github.io/</link>
+			<url>https://busportsanalytics.com/assets/sag_logo_square.png</url>
+			<link>https://busportsanalytics.com/</link>
 			<description>Official website of the Sports Analytics Group @ BU, an undergraduate club for students who love sports analytics</description>
 		</image><item>
 			<title>The xT Transfer Algorithm: Viktor Gyökeres to Arsenal</title>
@@ -38,9 +38,9 @@
 </div>
 				]]>
 			</description>
-			<link>https://bu-sports-analytics.github.io/20250818_tejas-xt/</link>
+			<link>https://busportsanalytics.com/20250818_tejas-xt/</link>
 			<category>posts</category>
-		    <guid isPermaLink="true">https://bu-sports-analytics.github.io/20250818_tejas-xt/</guid>
+		    <guid isPermaLink="true">https://busportsanalytics.com/20250818_tejas-xt/</guid>
       <pubDate>Mon, 18 Aug 2025 00:00:00 -0400</pubDate>
 		</item><item>
 			<title>Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!</title>
@@ -52,9 +52,9 @@
 </div>
 				]]>
 			</description>
-			<link>https://bu-sports-analytics.github.io/20250404_osu/</link>
+			<link>https://busportsanalytics.com/20250404_osu/</link>
 			<category>posts</category>
-		    <guid isPermaLink="true">https://bu-sports-analytics.github.io/20250404_osu/</guid>
+		    <guid isPermaLink="true">https://busportsanalytics.com/20250404_osu/</guid>
       <pubDate>Fri, 04 Apr 2025 00:00:00 -0400</pubDate>
 		</item></channel>
 </rss>

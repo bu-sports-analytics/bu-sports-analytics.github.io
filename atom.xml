@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" >
 	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
-	<link href="https://bu-sports-analytics.github.io/atom.xml" rel="self" type="application/atom+xml" />
-	<link href="https://bu-sports-analytics.github.io/" rel="alternate" type="text/html" />
-	<updated>2026-02-19T10:45:27-05:00</updated>
-	<id>https://bu-sports-analytics.github.io/atom.xml</id>
+	<link href="https://busportsanalytics.com/atom.xml" rel="self" type="application/atom+xml" />
+	<link href="https://busportsanalytics.com/" rel="alternate" type="text/html" />
+	<updated>2026-03-21T12:07:47-04:00</updated>
+	<id>https://busportsanalytics.com/atom.xml</id>
 	<title>Sports Analytics Group @ BU | Sports Analytics Group at Boston University</title>
 	<subtitle>Sports Analytics Group at Boston University</subtitle>
 	<author>
@@ -12,14 +12,14 @@
 					
 	</author>
 	<rights>(c) 2026, Sports Analytics Group @ BU</rights>
-	<icon>https://bu-sports-analytics.github.io/assets/sag_logo_square_tiny.png</icon>
-	<logo>https://bu-sports-analytics.github.io/assets/sag_logo_square.png</logo><entry>
+	<icon>https://busportsanalytics.com/assets/sag_logo_square_tiny.png</icon>
+	<logo>https://busportsanalytics.com/assets/sag_logo_square.png</logo><entry>
 		<title type="html">The xT Transfer Algorithm: Viktor Gyökeres to Arsenal</title>
-		<link href="https://bu-sports-analytics.github.io/20250818_tejas-xt/" rel="alternate" type="text/html" title="The xT Transfer Algorithm: Viktor Gyökeres to Arsenal"/>
+		<link href="https://busportsanalytics.com/20250818_tejas-xt/" rel="alternate" type="text/html" title="The xT Transfer Algorithm: Viktor Gyökeres to Arsenal"/>
 		<published>2025-08-18T00:00:00-04:00</published>
 		<updated>2025-08-18T00:00:00-04:00</updated>
-		<id>https://bu-sports-analytics.github.io/20250818_tejas-xt/</id>
-		<content type="html" xml:base="https://bu-sports-analytics.github.io/20250818_tejas-xt/">
+		<id>https://busportsanalytics.com/20250818_tejas-xt/</id>
+		<content type="html" xml:base="https://busportsanalytics.com/20250818_tejas-xt/">
 		
   		
 	&lt;p&gt;1 min.&lt;/p&gt;
@@ -45,11 +45,11 @@
 		
 	</entry><entry>
 		<title type="html">Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!</title>
-		<link href="https://bu-sports-analytics.github.io/20250404_osu/" rel="alternate" type="text/html" title="Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!"/>
+		<link href="https://busportsanalytics.com/20250404_osu/" rel="alternate" type="text/html" title="Congrats to Tejas and Sam on winning the 2025 Ohio State Sports Analytics Hackathon!"/>
 		<published>2025-04-04T00:00:00-04:00</published>
 		<updated>2025-04-04T00:00:00-04:00</updated>
-		<id>https://bu-sports-analytics.github.io/20250404_osu/</id>
-		<content type="html" xml:base="https://bu-sports-analytics.github.io/20250404_osu/">
+		<id>https://busportsanalytics.com/20250404_osu/</id>
+		<content type="html" xml:base="https://busportsanalytics.com/20250404_osu/">
 		
   		
 	&lt;p&gt;1 min.&lt;/p&gt;
