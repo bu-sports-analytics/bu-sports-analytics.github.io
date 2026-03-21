@@ -14,7 +14,7 @@ title                   : Sports Analytics Group @ BU    #default["repository_na
 title_separator         :     #default [" | "]
 subtitle                : Sports Analytics Group at Boston University   #default [your-repository-tagline]  
 description             : Official website of the Sports Analytics Group @ BU, an undergraduate club for students who love sports analytics #default [your-repository-tagline]
-url                     :     #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
+url                     : "https://busportsanalytics.com"    #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 repository              :     bu-sports-analytics/bu-sports-analytics.github.io # Needs to be set (e.g. dieghernan/chulapa)
 words_per_minute        :     #default[200]
