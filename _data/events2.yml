@@ -115,4 +115,36 @@ events:
     location: "HAR 210"
     type: "meeting"
 
-  
+  - title: "General Meeting"
+    date: "2026-02-25"
+    description: "Breaking down elite international play (Hughes x Harvey) + stats, games, and more"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 228"
+    type: "meeting"
+
+  - title: "WAR Room 3: CFB Coaching Trees"
+    date: "2026-03-04"
+    description: "Member presentation on CFB Coaching Trees + games and analytical breakdowns"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 228"
+    type: "meeting"
+
+  - title: "March Madness Meeting"
+    date: "2026-03-18"
+    description: "March Madness breakdown + BIG opportunity w/ BU MIH"
+    image: null
+    time: "6:00 PM"
+    location: "HAR 220"
+    type: "meeting"
+
+  - title: "WAR Room 4: Data Sources & Future Plans"
+    date: "2026-03-25"
+    description: "Cool potential data sources for new projects, future plans, and sport-specific updates"
+    image: null
+    time: "6:00 PM"
+    location: "CAS 312"
+    type: "meeting"
+
+
