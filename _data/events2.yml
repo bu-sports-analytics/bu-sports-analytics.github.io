@@ -146,5 +146,13 @@ events:
     time: "6:00 PM"
     location: "CAS 312"
     type: "meeting"
+  - title: "General Meeting"
+    date: "2026-04-01"
+    time: "6:00 PM"
+    location: "HAR 220"
+    description: "More info on our Hackathon, sports news & updates, games & more"
+    image: null
+    type: "meeting"
+
 
 
