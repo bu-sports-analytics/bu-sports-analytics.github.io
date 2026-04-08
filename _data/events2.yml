@@ -176,9 +176,4 @@ events:
     location: "CDS 164"
     description: "Compete for $600 in prizes! Work with real soccer data, judged by data scientists from USSF & MLS. Food served all day."
     image: null
-    type: "event"events:
-  - title: "First General Meeting"
-    date: "2025-09-10"
-    description: null
-    image: null
-    type: "meeting"
+    type: "event"
