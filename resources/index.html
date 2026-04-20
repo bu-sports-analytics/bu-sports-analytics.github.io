@@ -4,44 +4,181 @@ title: Resources
 ---
 
 <style>
-  .resource-card {
-    display: block;
-    background-color: #f8f9fa;
-    border: 1px solid #ced4da;
-    border-radius: 0.5rem;
-    padding: 1rem 1.25rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  .obsidian {
+    max-width: 780px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #2e3338;
+    line-height: 1.55;
   }
-  .resource-card:hover {
-    background-color: #eef1f4;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
-    text-decoration: none;
-    color: inherit;
+  .obsidian h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #e0e0e0;
+    color: #1a1a1a;
   }
-  .resource-card .title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
-  }
-  .resource-card .arrow {
+  .obsidian h1:first-child { margin-top: 0; }
+  .obsidian h2 {
     font-size: 1.25rem;
-    color: #cc0000;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+    color: #3a3a3a;
+  }
+  .obsidian ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 0 0 0.75rem;
+  }
+  .obsidian li { margin: 0.15rem 0; }
+  .obsidian a {
+    color: #8957e5;
+    text-decoration: none;
+  }
+  .obsidian a:hover { text-decoration: underline; }
+  .obsidian .note {
+    color: #6a737d;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
 </style>
 
-<main class="container-lg" style="min-height: 60vh;">
-  <div class="mt-5" style="max-width: 600px; margin: 0 auto;">
-    <a href="https://docs.google.com/spreadsheets/d/1fiiKbd0bUZ7xeh93lGlFUYMK4ZXfAAp7ULXpM55MipM/edit?usp=sharing" target="_blank" rel="noopener" class="resource-card">
-      <div class="title-row">
-        <span>SAG@BU Resource Guide</span>
-        <span class="arrow">&rarr;</span>
-      </div>
-      <small class="text-muted">links to accounts, datasets, and authors that we love from each sport</small>
-    </a>
-  </div>
+<main class="obsidian">
+  <p class="note">Sourced from the <a href="https://docs.google.com/spreadsheets/d/1fiiKbd0bUZ7xeh93lGlFUYMK4ZXfAAp7ULXpM55MipM/edit?usp=sharing" target="_blank" rel="noopener">SAG@BU Resource Guide</a>.</p>
+
+  <h1>Soccer</h1>
+
+  <h2>Accounts</h2>
+  <ul>
+    <li><a href="https://bengriffis.com/" target="_blank" rel="noopener">Ben Griffis</a></li>
+    <li><a href="https://x.com/lambertsmarc" target="_blank" rel="noopener">Marc Lamberts</a></li>
+    <li><a href="https://x.com/de_cayton" target="_blank" rel="noopener">Donald Cayton</a></li>
+    <li><a href="https://x.com/karun1710" target="_blank" rel="noopener">Karun Singh</a></li>
+    <li><a href="https://www.nytimes.com/athletic/author/mark-carey/" target="_blank" rel="noopener">Mark Carey</a></li>
+    <li><a href="https://www.nytimes.com/athletic/author/tom-worville/" target="_blank" rel="noopener">Tom Worville</a></li>
+    <li><a href="https://www.nytimes.com/athletic/author/conor-oneill/" target="_blank" rel="noopener">Conor O Neil</a></li>
+    <li><a href="https://www.youtube.com/channel/UCb60z8UyQJOFnXcDLmME-0A" target="_blank" rel="noopener">Chris Gill</a></li>
+    <li><a href="https://www.thetransferflow.com/" target="_blank" rel="noopener">The Transfer Flow</a></li>
+    <li><a href="https://open.spotify.com/show/06QIGhqK31Qw1UvfHzRIDA?si=a21e9cfef0ed4df4" target="_blank" rel="noopener">Tifo Football Podcast</a></li>
+    <li><a href="https://www.americansocceranalysis.com/" target="_blank" rel="noopener">American Soccer Analysis</a></li>
+  </ul>
+
+  <h2>Data</h2>
+  <ul>
+    <li><a href="https://fbref.com/en/" target="_blank" rel="noopener">FBref</a></li>
+    <li><a href="https://www.whoscored.com/" target="_blank" rel="noopener">WhoScored</a></li>
+    <li><a href="https://www.blog.fc.pff.com/blog/pff-fc-release-2022-world-cup-data" target="_blank" rel="noopener">PFF FC Data</a></li>
+    <li><a href="https://github.com/statsbomb/open-data" target="_blank" rel="noopener">Statsbomb</a></li>
+  </ul>
+
+  <h2>Packages</h2>
+  <ul>
+    <li><a href="https://jaseziv.github.io/worldfootballR/" target="_blank" rel="noopener">WorldFootballR</a></li>
+    <li><a href="https://github.com/Torvaney/ggsoccer" target="_blank" rel="noopener">ggSoccerR</a></li>
+    <li><a href="https://mplsoccer.readthedocs.io/en/latest/" target="_blank" rel="noopener">mplsoccer</a></li>
+    <li><a href="https://github.com/statsbomb/statsbombpy" target="_blank" rel="noopener">Statsbombpy</a></li>
+    <li><a href="https://github.com/oseymour/ScraperFC" target="_blank" rel="noopener">ScraperFC</a></li>
+  </ul>
+
+  <h2>Tutorials</h2>
+  <ul>
+    <li><a href="https://www.youtube.com/@McKayJohns/videos" target="_blank" rel="noopener">McKay Johns</a></li>
+    <li><a href="https://ewenme.github.io/understatr/reference/index.html" target="_blank" rel="noopener">UnderstatR</a></li>
+    <li><a href="https://fcpython.com/" target="_blank" rel="noopener">FCPython</a></li>
+  </ul>
+
+  <h2>Research/Papers</h2>
+  <ul>
+    <li><a href="https://janvanhaaren.be/posts/soccer-analytics-review-2024/index.html" target="_blank" rel="noopener">Soccer Analytics Review</a></li>
+    <li><a href="https://janvanhaaren.be/posts/soccer-analytics-review-2025/index.html" target="_blank" rel="noopener">Soccer Analytics Review 2025</a></li>
+  </ul>
+
+  <h1>Football</h1>
+
+  <h2>Accounts</h2>
+  <ul>
+    <li><a href="https://x.com/SportMDAnalysis" target="_blank" rel="noopener">Deepak Chona (injuries)</a></li>
+    <li><a href="https://x.com/jmthrivept" target="_blank" rel="noopener">Jeff Mueller (injuries)</a></li>
+    <li><a href="https://x.com/FantasyPtsData" target="_blank" rel="noopener">Fantasy Points Data</a></li>
+  </ul>
+
+  <h2>Data</h2>
+  <ul>
+    <li><a href="https://nflscorigami.com/" target="_blank" rel="noopener">Scoragami</a></li>
+    <li><a href="https://nextgenstats.nfl.com/stats/top-plays/fastest-ball-carriers" target="_blank" rel="noopener">NFL NGS</a></li>
+    <li><a href="https://www.footballdb.com/" target="_blank" rel="noopener">Football DB</a></li>
+    <li><a href="https://ftnfantasy.com/stats" target="_blank" rel="noopener">FTN Fantasy</a></li>
+    <li><a href="https://www.fantasylabs.com/nfl/vegas/" target="_blank" rel="noopener">Fantasy Labs</a></li>
+    <li><a href="https://doug-analytics.shinyapps.io/DOUG/" target="_blank" rel="noopener">DOUG Analytics</a></li>
+    <li><a href="https://www.pff.com/" target="_blank" rel="noopener">PFF</a></li>
+    <li><a href="https://www.sisdatahub.com/" target="_blank" rel="noopener">SIS Data Hub</a></li>
+    <li><a href="https://cfbstats.com/" target="_blank" rel="noopener">CFB Stats</a></li>
+  </ul>
+
+  <h2>Packages</h2>
+  <ul>
+    <li><a href="https://pypi.org/project/nfl-data-py/" target="_blank" rel="noopener">Pypi nfl-data-py</a></li>
+    <li><a href="https://github.com/pseudo-r/Public-ESPN-API" target="_blank" rel="noopener">ESPN API</a></li>
+  </ul>
+
+  <h2>Articles</h2>
+  <ul>
+    <li><a href="https://operations.nfl.com/gameday/analytics/stats-articles/can-next-gen-stats-help-predict-pass-plays/" target="_blank" rel="noopener">Predicting Plays</a></li>
+    <li><a href="https://www.youtube.com/watch?v=JZwLbzepgss" target="_blank" rel="noopener">Go for 2? (video)</a></li>
+  </ul>
+
+  <h1>Baseball</h1>
+
+  <h2>Accounts</h2>
+  <ul>
+    <li><a href="https://x.com/choice_fielder" target="_blank" rel="noopener">Max Bay</a></li>
+    <li><a href="https://x.com/TheWARmonger_" target="_blank" rel="noopener">WarMonger</a></li>
+    <li><a href="https://x.com/sunshinevvn?lang=en" target="_blank" rel="noopener">Vivienne Pelletier</a></li>
+    <li><a href="https://x.com/jonbecker_?lang=en" target="_blank" rel="noopener">Jon Becker (fangraphs)</a></li>
+    <li><a href="https://x.com/dohyoungpark" target="_blank" rel="noopener">Do-Hyoung Park (statcast)</a></li>
+    <li><a href="https://x.com/_dadler?lang=en" target="_blank" rel="noopener">David Adler (statcast)</a></li>
+    <li><a href="https://x.com/mike_petriello?lang=en" target="_blank" rel="noopener">Mike Petriello (statcast)</a></li>
+    <li><a href="https://x.com/DSzymborski" target="_blank" rel="noopener">Dan Szymborski (fangraphs)</a></li>
+    <li><a href="https://x.com/enosarris" target="_blank" rel="noopener">Eno Sarris</a></li>
+    <li><a href="https://x.com/SlangsOnSports" target="_blank" rel="noopener">Sarah Langs</a></li>
+    <li><a href="https://x.com/SamEhrlich" target="_blank" rel="noopener">Sam Ehrlich (driveline)</a></li>
+    <li><a href="https://x.com/drivelinekyle" target="_blank" rel="noopener">Kyle Boddy (driveline)</a></li>
+    <li><a href="https://x.com/RobertFrey40" target="_blank" rel="noopener">Robert Frey</a></li>
+    <li><a href="https://bsky.app/profile/adarowski.bsky.social" target="_blank" rel="noopener">Adam Darowski</a></li>
+    <li><a href="https://bsky.app/profile/jayjaffe.bsky.social" target="_blank" rel="noopener">Jay Jaffe</a></li>
+    <li><a href="https://www.spotrac.com/mlb/" target="_blank" rel="noopener">Spotrac</a></li>
+    <li><a href="https://x.com/Shawn_Spradling" target="_blank" rel="noopener">Shawn Spradling</a></li>
+  </ul>
+
+  <h2>Data</h2>
+  <ul>
+    <li><a href="https://www.baseball-reference.com/" target="_blank" rel="noopener">Baseball Reference</a></li>
+    <li><a href="https://1point02.jp/op/index.aspx" target="_blank" rel="noopener">Deltagraphs (NPB)</a></li>
+    <li><a href="http://baseballsavant.mlb.com/" target="_blank" rel="noopener">Baseball Savant</a></li>
+    <li><a href="https://github.com/BillPetti/baseballr" target="_blank" rel="noopener">baseballr</a></li>
+    <li><a href="https://pypi.org/project/pybaseball/" target="_blank" rel="noopener">pybaseball</a></li>
+    <li><a href="https://www.reddit.com/r/mlbdata/comments/1i98qd7/mlb_stats_api_documentation/" target="_blank" rel="noopener">MLB Stats API</a></li>
+  </ul>
+
+  <h2>Articles</h2>
+  <ul>
+    <li><a href="https://www.tangotiger.com/index.php" target="_blank" rel="noopener">Tom Tango</a></li>
+    <li><a href="https://www.youtube.com/drivelinebaseball" target="_blank" rel="noopener">Driveline</a></li>
+    <li><a href="https://www.fangraphs.com/" target="_blank" rel="noopener">Fangraphs</a></li>
+    <li><a href="http://baseballprospectus.com" target="_blank" rel="noopener">Baseball Prospectus</a></li>
+    <li><a href="https://youtube.com/@LanceBrozdowski" target="_blank" rel="noopener">Lance Brozdowski</a></li>
+    <li><a href="https://www.mlbtraderumors.com/" target="_blank" rel="noopener">MLBTradeRumors</a></li>
+    <li><a href="https://sabr.org/bioproject" target="_blank" rel="noopener">SABR Bioproject</a></li>
+    <li><a href="https://sabr.org/gamesproject" target="_blank" rel="noopener">SABR Games Project</a></li>
+    <li><a href="https://www.baseball-reference.com/bullpen/" target="_blank" rel="noopener">BR Bullpen</a></li>
+    <li><a href="https://www.baseballprospectus.com/author/russell_a_carleton/" target="_blank" rel="noopener">Russell Carleton</a></li>
+  </ul>
+
+  <h2>Research/Papers</h2>
+  <ul>
+    <li><a href="https://sabr.org/" target="_blank" rel="noopener">SABR</a></li>
+    <li><a href="https://sabr.org/baseball-research-journal-archives/" target="_blank" rel="noopener">SABR Research Journal</a></li>
+  </ul>
 </main>
